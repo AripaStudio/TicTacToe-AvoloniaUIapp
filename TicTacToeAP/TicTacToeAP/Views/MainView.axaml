@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TicTacToeAP.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
+             x:Class="TicTacToeAP.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+	<Grid Background="Aqua">
+
+        <StackPanel Background="Aquamarine" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label FontSize="22" Content="Aripa Studio" HorizontalAlignment="Center"></Label>
+            <Label Name="Lbl_WinName" FontSize="22" Content="" HorizontalAlignment="Center"></Label>
+            <StackPanel Orientation="Horizontal" Margin="3" >
+                <Button Width="40" Height="40"  Name="Button0_0" Tag="0,0" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button0_1" Tag="0,1" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button0_2" Tag="0,2" Click="ButtonClick_OnClick"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="3">
+				<Button Width="40" Height="40" Name="Button1_0" Tag="1,0" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button1_1" Tag="1,1" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button1_2" Tag="1,2" Click="ButtonClick_OnClick"/>
+			</StackPanel >
+            <StackPanel Orientation="Horizontal" Margin="3" >
+                <Button Width="40" Height="40" Name="Button2_0" Tag="2,0" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button2_1" Tag="2,1" Click="ButtonClick_OnClick"/>
+                <Button Width="40" Height="40" Name="Button2_2" Tag="2,2" Click="ButtonClick_OnClick"/>
+            </StackPanel>
+
+            <Button Name="Btn_ResetGame" Background="Red"  Content="Reset Game" Click="Btn_ResetGame_OnClick" ></Button>
+        </StackPanel>
+       
+       
+    </Grid>
+  
+</UserControl>
